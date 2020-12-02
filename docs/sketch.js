@@ -22,7 +22,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
   cursor(CROSS);
-  socket = io.connect ('http://localhost:3000');
+  socket = io.connect ('https://mighty-meadow-16492.herokuapp.com/');
   socket.on ('mouse', newDrawing);
   osc1 = new p5.SinOsc();
   osc1.amp(0.5);
