@@ -1,13 +1,12 @@
-          var msg = "Hello World!";
+var msg = "Hello World!";
 console.log(msg);
 
 var express = require ('express');
 var app = express();
 
-var server = app.listen(process.env.PORT || 3000, 
-	() => console.log("Server is running..."));
+var server = app.listen(process.env.PORT || 3000);
                         
-app.use(express.static('pubilc'));
+app.use(express.static('docs'));
 
 var socket = require('socket.io');
 var io = socket(server);
