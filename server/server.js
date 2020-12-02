@@ -4,8 +4,9 @@ console.log(msg);
 var express = require ('express');
 var app = express();
 
-var server = app.listen(process.env.PORT || 3000);
-
+var server = app.listen(process.env.PORT || 3000, 
+	() => console.log("Server is running..."));
+                        
 app.use(express.static('pubilc'));
 
 var socket = require('socket.io');
