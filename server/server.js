@@ -8,15 +8,7 @@ var server = app.listen(process.env.PORT || 3000);
                         
 app.use(express.static('docs'));
 
-var socket = require('socket.io')(httpServer, {
-  cors: {
-    origin: "https://mighty-meadow-16492.herokuapp.com/",
-    methods: ["GET", "POST"],
-    allowedHeaders: ["my-custom-header"],
-    credentials: true
-  }
-});
-
+var socket = require('socket.io');
 var io = socket(server);
 
 io.sockets.on('connection',newConnection);
