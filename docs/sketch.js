@@ -7,7 +7,6 @@
 // █████████████████████████████████████████████████
 
 var socket;
-var io;
 
 var osc1;
 var osc2;
@@ -23,13 +22,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
   cursor(CROSS);
-  io = require("socket.io-client");
-  socket = io.connect ('https://mighty-meadow-16492.herokuapp.com/', {
-  withCredentials: true,
-  extraHeaders: {
-    "my-custom-header": "abcd"
-  }
-});
+  socket = io.connect ('https://mighty-meadow-16492.herokuapp.com/');
   socket.on ('mouse', newDrawing);
   osc1 = new p5.SinOsc();
   osc1.amp(0.5);
