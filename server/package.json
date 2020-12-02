@@ -1,0 +1,21 @@
+{
+  "name": "studio_9_example",
+  "version": "1.0.0",
+  "description": "studio 9 online game",
+  "main": "p5.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "socket"
+  ],
+  "author": "Yin Yu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
